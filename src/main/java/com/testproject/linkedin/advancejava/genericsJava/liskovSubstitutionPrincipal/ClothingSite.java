@@ -8,21 +8,18 @@ public class ClothingSite {
 
     public static void main(String[] args) {
         ShirtItem shirtItem = new ShirtItem();
-        checkoutItem(shirtItem);
+        ShirtItem shirtItem2 = new ShirtItem();
 
-        JacketItem jacketItem = new JacketItem();
-        checkoutItem(jacketItem);
-
-        List<ClothingItem> clothingItemList = new ArrayList<>();
+        List<ShirtItem> clothingItemList = new ArrayList<>();
         clothingItemList.add(shirtItem);
-        clothingItemList.add(jacketItem);
+        clothingItemList.add(shirtItem2);
         checkoutAllItem(clothingItemList);
     }
     static void checkoutItem(ClothingItem item) {
         System.out.println("Item purchased: " + item.getName() + ", price: " + item.getPrice());
     }
 
-    static void checkoutAllItem(List<ClothingItem> clothingItem){
+    static void checkoutAllItem(List<? extends ClothingItem> clothingItem){
         clothingItem.forEach((item)->{
             checkoutItem(item);
         });
