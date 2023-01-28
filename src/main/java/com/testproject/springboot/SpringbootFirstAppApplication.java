@@ -9,7 +9,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 @SpringBootApplication
-@ComponentScan(basePackageClasses = EmployeeController.class)
+@ComponentScan
 public class SpringbootFirstAppApplication {
 	public static void main(String[] args) {
 
